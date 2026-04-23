@@ -1,0 +1,81 @@
+text,amount,category
+Swiggy order,350,Food
+Zomato dinner,480,Food
+Restaurant lunch,600,Food
+Grocery from DMart,2200,Food
+Cafe coffee,180,Food
+Starbucks latte,450,Food
+McDonalds burger,320,Food
+KFC order,550,Food
+Pizza Palace,400,Food
+Breakfast at hotel,250,Food
+Street food dinner,150,Food
+Fruit market purchase,300,Food
+Organic vegetables,800,Food
+Tea shop,50,Food
+Swiggy breakfast,200,Food
+Zomato lunch delivery,380,Food
+Biryani order,350,Food
+Ice cream parlour,120,Food
+Juice bar,100,Food
+Milk and dairy,400,Food
+Uber to office,320,Travel
+Ola cab ride,280,Travel
+Metro card recharge,500,Travel
+Train ticket Mumbai,1200,Travel
+Flight Bangalore,5500,Travel
+Bus pass monthly,800,Travel
+Taxi airport,950,Travel
+Rapido bike ride,120,Travel
+Auto rickshaw,80,Travel
+Outstation cab,2500,Travel
+Train Chennai,900,Travel
+Uber outstation,1800,Travel
+Ola airport drop,650,Travel
+Local bus fare,40,Travel
+Flight Delhi return,8500,Travel
+Electricity bill,1800,Bills
+Water bill quarterly,650,Bills
+House rent paid,22000,Bills
+Internet recharge Jio,999,Bills
+Airtel mobile bill,599,Bills
+Netflix subscription,649,Bills
+Amazon Prime,1499,Bills
+Hotstar subscription,299,Bills
+Gas cylinder,950,Bills
+Society maintenance,1200,Bills
+Broadband bill,799,Bills
+Insurance premium,3500,Bills
+DTH recharge,350,Bills
+Cable TV bill,250,Bills
+Municipal tax quarterly,2000,Bills
+Amazon haul,3200,Shopping
+Flipkart sale,2800,Shopping
+Myntra clothes,1800,Shopping
+Shoes from Bata,1500,Shopping
+H&M shopping,2200,Shopping
+Zara outfit,3500,Shopping
+Electronics purchase,12000,Shopping
+Books from Amazon,650,Shopping
+Toys for kids,850,Shopping
+Stationery,350,Shopping
+Sports equipment,4500,Shopping
+Cosmetics Nykaa,1200,Shopping
+Kitchenware,950,Shopping
+Furniture small item,3500,Shopping
+Mall shopping,5000,Shopping
+Miscellaneous expense,450,Others
+ATM withdrawal,2000,Others
+Donation,500,Others
+Gym membership,1200,Others
+Medical consultation,800,Others
+Medicines pharmacy,1500,Others
+Cinema tickets,600,Others
+Event tickets,1800,Others
+Parking charges,200,Others
+Laundry charges,400,Others
+Haircut salon,350,Others
+Newspaper subscription,200,Others
+Pet food,600,Others
+Plant nursery,300,Others
+Miscellaneous,100,Others

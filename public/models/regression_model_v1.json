@@ -1,0 +1,14 @@
+{
+  "metadata": {
+    "version": "v1",
+    "type": "polynomial_linear_regression",
+    "trained_at": "2026-04-20 20:19:53",
+    "description": "Monthly spending predictor. Input: [month_index, month_index^2]. Output: predicted INR spend."
+  },
+  "coef": [
+    1075.4089769879247,
+    -22.750056960583272
+  ],
+  "intercept": 29043.24675324675,
+  "n_training_months": 24
+}
