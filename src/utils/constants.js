@@ -1,18 +1,18 @@
 export const CATEGORIES = [
   "Food",
-  "Travel",
+  "Transport",
   "Bills",
   "Shopping",
   "Others"
 ];
 
-// Colors for charts and UI
+// Colors for charts and UI matching the image
 export const CATEGORY_COLORS = {
-  Food: "#FF6B6B",
-  Travel: "#4ECDC4",
-  Bills: "#45B7D1",
-  Shopping: "#F9D56E",
-  Others: "#95A5A6"
+  Food: "#5A4B8A",
+  Transport: "#628994",
+  Shopping: "#E88B42",
+  Bills: "#74AC8C",
+  Others: "#A6ABB3"
 };
 
 // Vocabulary for the ML Bag of Words categorizer.

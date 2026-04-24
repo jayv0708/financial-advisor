@@ -33,7 +33,7 @@ const ExpenseList = ({ expenses, onUpdateExpense, onDeleteExpense }) => {
   };
 
   return (
-    <div className="card" style={{ gridColumn: '1 / -1' }}>
+    <div className="card" style={{ marginTop: '1.5rem' }}>
       <h3 className="text-lg font-semibold" style={{ marginBottom: '1.5rem' }}>Transactions</h3>
       
       {expenses.length === 0 ? (

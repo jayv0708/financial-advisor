@@ -2,6 +2,33 @@ import { INITIAL_EXPENSES } from './constants';
 
 const STORAGE_KEY = 'expense_advisor_data';
 const INCOME_KEY = 'expense_advisor_income';
+const USER_KEY = 'expense_advisor_user';
+
+// --- User Profile Storage ---
+export const loadUser = () => {
+  try {
+    const data = localStorage.getItem(USER_KEY);
+    return data ? JSON.parse(data) : null;
+  } catch {
+    return null;
+  }
+};
+
+export const saveUser = (user) => {
+  try {
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
+  } catch (error) {
+    console.error('Failed to save user:', error);
+  }
+};
+
+export const clearUser = () => {
+  try {
+    localStorage.removeItem(USER_KEY);
+  } catch (error) {
+    console.error('Failed to clear user:', error);
+  }
+};
 
 export const loadExpenses = () => {
   try {

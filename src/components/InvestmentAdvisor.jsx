@@ -135,14 +135,14 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
       <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '0.5rem' }}>
         <Target size={28} color="var(--accent-primary)" />
         <h3 className="text-xl font-bold">Live AI Investment Advisor</h3>
-        <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '12px', background: 'rgba(46, 204, 113, 0.2)', color: 'var(--success)', fontWeight: 'bold' }}>LIVE DATA</span>
+        <span style={{ fontSize: '11px', padding: '3px 8px', borderRadius: '12px', background: 'var(--success-bg)', color: 'var(--success)', fontWeight: 'bold' }}>LIVE DATA</span>
       </div>
       <p className="text-secondary text-sm" style={{ marginBottom: '2rem' }}>
         Portfolio allocation dynamically driven by live market index data and real-time statistical ML heuristics (Volatility & Momentum).
       </p>
 
       {/* Settings Row */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', background: 'rgba(0,0,0,0.2)', padding: '1.5rem', borderRadius: '8px', marginBottom: '2rem' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '2rem', background: 'var(--bg-color)', border: '1px solid var(--card-border)', padding: '1.5rem', borderRadius: '8px', marginBottom: '2rem' }}>
         
         {/* Investable Capital */}
         <div style={{ flex: 1, minWidth: '180px' }}>
@@ -166,9 +166,9 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
               <button key={level} onClick={() => setRiskLevel(level)}
                 style={{
                   flex: 1, padding: '0.6rem', borderRadius: '8px', cursor: 'pointer',
-                  background: riskLevel === level ? 'var(--accent-primary)' : 'rgba(255,255,255,0.08)',
+                  background: riskLevel === level ? 'var(--accent-primary)' : 'var(--card-bg)',
                   border: `1px solid ${riskLevel === level ? 'var(--accent-primary)' : 'var(--card-border)'}`,
-                  color: 'white', fontWeight: '600', display: 'flex', alignItems: 'center',
+                  color: riskLevel === level ? 'white' : 'var(--text-primary)', fontWeight: '600', display: 'flex', alignItems: 'center',
                   justifyContent: 'center', gap: '6px'
                 }}>
                 {level === 'Low' && <ShieldCheck size={16} />}
@@ -234,7 +234,7 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
 
             {/* ML Trends + Insights */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-              <div className="card" style={{ padding: '1rem', background: 'rgba(255,255,255,0.04)' }}>
+              <div className="card" style={{ padding: '1rem', background: 'var(--bg-color)', border: '1px solid var(--card-border)', boxShadow: 'none' }}>
                 <h4 className="font-semibold mb-2" style={{ borderBottom: '1px solid var(--card-border)', paddingBottom: '0.5rem', marginBottom: '0.75rem', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                   <span>Asset Trends Live <span className="text-xs text-secondary font-medium">(ML Output)</span></span>
                   <div style={{ display: 'flex', alignItems: 'center', gap: '4px', fontSize: '10px', color: 'var(--text-secondary)' }}>
@@ -248,7 +248,7 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
                   const isPositive = stats.changePercent >= 0;
                   
                   return (
-                  <div key={key} style={{ display: 'flex', flexDirection: 'column', padding: '0.5rem 0', borderBottom: '1px solid rgba(255,255,255,0.05)' }}>
+                  <div key={key} style={{ display: 'flex', flexDirection: 'column', padding: '0.5rem 0', borderBottom: '1px solid var(--card-border)' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                         <div>
                             <span className="text-sm font-semibold">{label}</span>
@@ -318,7 +318,7 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
                       <stop offset="95%" stopColor="var(--info)" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="rgba(255,255,255,0.08)" />
+                  <CartesianGrid strokeDasharray="3 3" stroke="var(--card-border)" />
                   <XAxis dataKey="year" stroke="var(--text-secondary)" />
                   <YAxis stroke="var(--text-secondary)" tickFormatter={v => `₹${(v/100000).toFixed(1)}L`} />
                   <Tooltip
@@ -332,7 +332,7 @@ const InvestmentAdvisor = ({ expenses, monthlyIncome }) => {
             </div>
 
             {/* Disclaimer */}
-            <p className="text-xs text-secondary" style={{ marginTop: '0.75rem', background: 'rgba(0,0,0,0.2)', padding: '0.5rem', borderRadius: '4px' }}>
+            <p className="text-xs text-secondary" style={{ marginTop: '0.75rem', background: 'var(--bg-color)', border: '1px solid var(--card-border)', padding: '0.75rem', borderRadius: '6px' }}>
               Projections use historical CAGR estimates (FDs: 6.5%, Gold: ~10%, Nifty50: ~12%, Crypto: ~25%).
               Returns are NOT guaranteed. This is educational guidance only, not financial advice.
             </p>

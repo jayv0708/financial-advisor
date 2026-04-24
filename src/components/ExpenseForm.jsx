@@ -61,21 +61,21 @@ const ExpenseForm = ({ onAddExpense, modelReady }) => {
         {/* Real-time ML Prediction Display */}
         {modelReady && predictedCat && text.length > 2 && (
           <div className="animate-fade-in" style={{
-            background: 'rgba(155, 89, 182, 0.1)',
+            background: 'var(--bg-color)',
             padding: '0.75rem',
             borderRadius: '8px',
             marginBottom: '1.25rem',
             display: 'flex',
             alignItems: 'center',
             gap: '0.75rem',
-            border: '1px solid rgba(155, 89, 182, 0.3)'
+            border: '1px solid var(--card-border)'
           }}>
             <Zap size={18} color="var(--accent-primary)" />
             <div style={{ flex: 1 }}>
               <p className="text-sm">
                 AI Prediction: <strong style={{ color: CATEGORY_COLORS[predictedCat.category] }}>{predictedCat.category}</strong>
               </p>
-              <div style={{ width: '100%', height: '4px', background: 'rgba(255,255,255,0.1)', borderRadius: '2px', marginTop: '6px' }}>
+              <div style={{ width: '100%', height: '4px', background: 'var(--card-border)', borderRadius: '2px', marginTop: '6px' }}>
                 <div style={{ 
                   height: '100%', 
                   background: 'var(--accent-primary)', 
