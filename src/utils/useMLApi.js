@@ -5,7 +5,15 @@
  * Reads backend URL from VITE_ML_API_URL (env variable).
  */
 
-const ML_API_URL = (import.meta.env.VITE_ML_API_URL || 'http://localhost:8000').replace(/\/+$/, '');
+function getBackendUrl() {
+  let url = (import.meta.env.VITE_ML_API_URL || 'http://localhost:8000').trim().replace(/\/+$/, '');
+  if (url && !url.startsWith('http://') && !url.startsWith('https://')) {
+    url = `https://${url}`;
+  }
+  return url;
+}
+
+const ML_API_URL = getBackendUrl();
 
 /** Generic fetch with error handling */
 async function apiFetch(path, options = {}) {
