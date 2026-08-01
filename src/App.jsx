@@ -9,6 +9,7 @@ import InvestmentsPage from './pages/InvestmentsPage';
 import GoalsPage from './pages/GoalsPage';
 import InsightsPage from './pages/InsightsPage';
 import SettingsPage from './pages/SettingsPage';
+import MLHubPage from './pages/MLHubPage';
 
 // Guard: redirect to welcome if no user is set
 function PrivateRoute({ children }) {
@@ -27,6 +28,7 @@ function AppRoutes() {
       <Route path="/investments" element={<PrivateRoute><InvestmentsPage /></PrivateRoute>} />
       <Route path="/goals" element={<PrivateRoute><GoalsPage /></PrivateRoute>} />
       <Route path="/insights" element={<PrivateRoute><InsightsPage /></PrivateRoute>} />
+      <Route path="/ml-hub" element={<PrivateRoute><MLHubPage /></PrivateRoute>} />
       <Route path="/settings" element={<PrivateRoute><SettingsPage /></PrivateRoute>} />
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />

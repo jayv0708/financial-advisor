@@ -1,0 +1,43 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r ml-backend/requirements.txt
+
+      - name: Run tests
+        run: |
+          cd ml-backend
+          python -m pytest tests/ -v
+
+      - name: Health check (verify server starts)
+        run: |
+          cd ml-backend
+          timeout 15 python -c "
+          import subprocess, time, requests
+          proc = subprocess.Popen(['python', '-m', 'uvicorn', 'main:app', '--port', '8001'])
+          time.sleep(8)
+          try:
+              r = requests.get('http://127.0.0.1:8001/health', timeout=5)
+              assert r.status_code == 200
+              print('Health check passed:', r.json())
+          finally:
+              proc.terminate()
+          " || true

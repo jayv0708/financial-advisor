@@ -30,3 +30,13 @@ __pycache__/
 venv/
 env/
 .env
+
+# ML Backend
+ml-backend/mlruns/
+ml-backend/artifacts/*.joblib
+ml-backend/artifacts/cache/
+*.joblib
+retrain_log.json
+
+# Jupyter
+.ipynb_checkpoints/

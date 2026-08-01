@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, List, PieChart, TrendingUp, Target, Lightbulb, Settings, Quote } from 'lucide-react';
+import { Home, List, PieChart, TrendingUp, Target, Lightbulb, Settings, Quote, Brain } from 'lucide-react';
 import Profile from './Profile';
 import DateSelector from './DateSelector';
 
@@ -11,6 +11,7 @@ const navItems = [
   { to: '/investments', icon: TrendingUp,   label: 'Investments' },
   { to: '/goals',       icon: Target,       label: 'Goals' },
   { to: '/insights',    icon: Lightbulb,    label: 'Insights' },
+  { to: '/ml-hub',      icon: Brain,        label: 'ML Hub' },
   { to: '/settings',    icon: Settings,     label: 'Settings' },
 ];
 
