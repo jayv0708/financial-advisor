@@ -85,6 +85,18 @@ async def lifespan(app: FastAPI):
     except Exception as e:
         logger.warning(f"MLflow init skipped: {e}")
 
+    # Auto-train models if missing on startup
+    try:
+        artifacts_dir = os.path.join(os.path.dirname(__file__), "artifacts")
+        stock_path = os.path.join(artifacts_dir, "stock_model.joblib")
+        if not os.path.exists(stock_path):
+            logger.info("Models not found on disk. Performing initial training...")
+            from pipeline.retrain import retrain_all
+            retrain_all(trigger="startup")
+            logger.info("Initial models trained successfully.")
+    except Exception as e:
+        logger.warning(f"Initial model training failed: {e}")
+
     # Start background scheduler
     try:
         from scheduler import start_scheduler
